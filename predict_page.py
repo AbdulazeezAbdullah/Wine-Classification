@@ -1,11 +1,11 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 
 def load_model():
     with open('Wine_Classification_Model.pkl', 'rb') as file:
-        model = pickle.load(file)
+        model = joblib.load(file)
     return model
         
 wine_model = load_model()
